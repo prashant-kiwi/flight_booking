@@ -4,6 +4,7 @@ class CreatePassengers < ActiveRecord::Migration
       t.string :name
       t.string :email
       t.string :phone
+      t.date :dob
 
       t.timestamps null: false
     end

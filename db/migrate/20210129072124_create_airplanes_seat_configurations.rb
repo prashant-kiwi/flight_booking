@@ -1,8 +1,8 @@
 class CreateAirplanesSeatConfigurations < ActiveRecord::Migration
   def change
-    create_table :airplanes_seat_configurations, :id => false do |t|
-      t.integer :airplane_id
-      t.integer :seat_configuration_id
+    create_join_table :airplanes, :seat_configurations do |t|
+      t.index :airplane_id
+      t.index :seat_configuration_id
     end
   end
 end
